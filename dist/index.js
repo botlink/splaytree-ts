@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SplayTreeSet = exports.SplayTreeMap = void 0;
 class SplayTreeNode {
     key;
     left = null;
@@ -209,7 +212,7 @@ class SplayTree {
         };
     }
 }
-export class SplayTreeMap extends SplayTree {
+class SplayTreeMap extends SplayTree {
     root = null;
     compare;
     validKey;
@@ -399,7 +402,8 @@ export class SplayTreeMap extends SplayTree {
     }
     [Symbol.toStringTag] = '[object Map]';
 }
-export class SplayTreeSet extends SplayTree {
+exports.SplayTreeMap = SplayTreeMap;
+class SplayTreeSet extends SplayTree {
     root = null;
     compare;
     validKey;
@@ -596,6 +600,7 @@ export class SplayTreeSet extends SplayTree {
     }
     [Symbol.toStringTag] = '[object Set]';
 }
+exports.SplayTreeSet = SplayTreeSet;
 class SplayTreeIterableIterator {
     tree;
     path = new Array();

@@ -1,5 +1,5 @@
-declare type Comparator<T> = (a: T, b: T) => number;
-declare type Predicate<T> = (value: T) => boolean;
+type Comparator<T> = (a: T, b: T) => number;
+type Predicate<T> = (value: T) => boolean;
 declare class SplayTreeNode<K, Node extends SplayTreeNode<K, Node>> {
     readonly key: K;
     left: Node | null;
